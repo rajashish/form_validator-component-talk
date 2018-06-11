@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default">
+  <div class="container container-fluid">
+    <a href="" class="navber-brand"><h4>New-APP</h4></a>
+  </div>
+</nav>
+<div align="center">
+  <button type="button" class="btn btn-warning hell" (click)="show1()"   aria-haspopup="true" aria-expanded="false" style="width:50%"><font size="6">View Details</font>
+</button>
+  <button type="button" class="btn btn-success" (click)="show2()"  aria-haspopup="true" aria-expanded="false" style="width:50%"><font size="6">Add</font>
+  </button>
+</div>
+<div id="add"  [style.display]="bt2">
+    <app-add-listing  ></app-add-listing>
+
+</div>
+<div id="show" [style.display]="bt1">
+    <app-new-listing ></app-new-listing>
+
+</div>

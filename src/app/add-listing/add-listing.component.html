@@ -1,0 +1,88 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Add a Listing</h4>
+  </div>
+
+  <div class="panel-body">
+
+    <form  [formGroup] = "formdata" (ngSubmit)="onSubmit(formdata.value)">
+
+        <div class="form-group ">
+            <label for="name" class="">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              name="name"
+              formControlName = "name"
+              ngModel
+              required>
+          </div>
+
+          <div class="form-group ">
+            <label for="email" class="">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              name="email"
+              formControlName = "email"
+              ngModel
+              required>
+          </div>
+
+
+          <div class="form-group ">
+            <label><input type="radio" name="optradio" value="male"  formControlName = "gender">Male</label>
+          <label><input type="radio" name="optradio" value="female" formControlName="gender">Female</label>
+        
+            </div>
+
+            <div class="form-group ">
+                <label for="mobile" class="">Mobile</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Mobile"
+                  name="mobile"
+                  formControlName = "mobile"
+                  ngModel
+                  required>
+              </div>
+
+            <div class="form-group ">
+                <label for="password" class="">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  name="password"
+                  formControlName = "password"
+                  ngModel
+                  required>
+              </div>
+
+              <div class="form-group ">
+                  <label for="confirmpassword" class="">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Confirm Password"
+                    name="confirmpassword"
+                    formControlName = "confirmpassword"
+                    ngModel
+                    required>
+                </div>
+                <button
+          class="btn btn-primary listing-button"
+          type="submit" 
+          ng-show="addListing" [disabled]="!this.formdata.valid">
+            Add
+        </button>
+        </form>
+        </div>
+        </div>
+    
+
+
+  
